@@ -56,7 +56,7 @@ const AboutSection = () => {
                                     </div>
                                     <div className="student-choose-list">
                                         <p className="mb-30">{data.home_02_cta_01_description}</p>
-                                        <ul>
+                                        {/* <ul>
                                             {data.home_02_cta_01_features && JSON.parse(data.home_02_cta_01_features).map((feature: IFeature, index: number) => (
                                                 <li key={"hometwo-feature-" + index +'-'+ String(feature).replaceAll(" ", "-")}>
                                                     <>
@@ -64,7 +64,7 @@ const AboutSection = () => {
                                                     </>
                                                 </li>
                                             ))}
-                                        </ul>
+                                        </ul> */}
                                     </div>
                                     {
                                         data && (

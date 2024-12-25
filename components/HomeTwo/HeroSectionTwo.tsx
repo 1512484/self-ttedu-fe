@@ -82,13 +82,13 @@ const HeroSectionTwo = () => {
                                             </form>
                                         </div>
                                         <div className="slider-course-content text-center">
-                                            <ul>
+                                            {/* <ul>
                                                 {data.home_02_header_features && JSON.parse(data.home_02_header_features).map((feature: IFeature, index: number) => (
                                                     <li key={"hero-feature-"+ index +'-'+ String(feature).replaceAll(" ", "-")}>
                                                         <><i className="fas fa-check-circle"></i>{<span><>{feature}</></span>}</>
                                                     </li>
                                                 ))}
-                                            </ul>
+                                            </ul> */}
                                         </div>
                                     </div>
                                 </div>
