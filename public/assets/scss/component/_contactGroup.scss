@@ -1,0 +1,200 @@
+@use "../abstract" as *;
+
+.contact-group {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10000;
+
+    .separator {
+        width: 56px;
+        height: 1px;
+        background-color: $gray-2;
+        margin: 12px 0 24px;
+    }
+
+    .contact {
+        &-item {
+            border-radius: 50%;
+            background-color: $theme-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            min-width: 56px;
+            height: 56px;
+            margin-bottom: 12px;
+
+            &:last-of-type {
+                background-color: $theme-color-2;
+                margin-bottom: 0;
+
+                &:hover {
+                    background-color: #ff7637;
+                }
+            }
+
+            svg {
+                color: $white;
+                transition: 0.3s ease-in-out;
+            }
+
+            &:hover {
+                background-color: #288037;
+                transform: scale(1.07);
+
+                // svg {
+                //     transform: scale(1.07);
+                // }
+            }
+        }
+    }
+
+    @include max-lg {
+        .separator {
+            width: 45px;
+        }
+
+        .contact {
+            &-item {
+                width: 45px;
+                min-width: 45px;
+                height: 45px;
+
+                svg {
+                    max-width: 22px;
+                }
+            }
+        }
+    }
+
+    @include max-md {
+        .separator {
+            width: 40px;
+        }
+
+        .contact {
+            &-item {
+                width: 40px;
+                min-width: 40px;
+                height: 40px;
+
+                svg {
+                    max-width: 21px;
+                }
+            }
+        }
+    }
+
+    @include max-sm {
+        .separator {
+            width: 36px;
+            margin: 0 0 12px;
+        }
+
+        .contact {
+            &-item {
+                width: 36px;
+                min-width: 36px;
+                height: 36px;
+                background-color: $white;
+                border: 1px solid $theme-color;
+
+                svg {
+                    max-width: 20px;
+                    color: $theme-color;
+                }
+
+                &:last-of-type {
+                    border-color: $theme-color-2;
+
+                    svg {
+                        color: $white;
+                    }
+
+                    &:hover {
+                        border-color: #ff7637;
+                    }
+                }
+
+                &:hover {
+                    background-color: $theme-color;
+
+                    svg {
+                        color: $white;
+                        transition: 0s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.chat-window-wrapper.n8n-chat {
+    bottom: 265px;
+
+    .chat-window {
+        position: fixed;
+        bottom: 0;
+        right: 95px;
+    }
+
+    .chat-window-toggle {
+        max-width: 56px;
+        max-height: 56px;
+        &:hover {
+            svg {
+                transform: scale(1.07);
+            }
+        }
+    }
+
+    @include max-lg {
+        bottom: 232px;
+        .chat-window-toggle {
+            max-width: 45px;
+            max-height: 45px;
+            svg {
+                max-width: 22px;
+            }
+        }
+        .chat-window {
+            right: 80px;
+        }
+    }
+    @include max-md {
+        bottom: 216px;
+        .chat-window-toggle {
+            max-width: 40px;
+            max-height: 40px;
+            svg {
+                max-width: 21px;
+            }
+        }
+        .chat-window {
+            right: 75px;
+            max-width: calc(100% - 75px);
+        }
+    }
+    @include max-sm {
+        bottom: 182px;
+        .chat-window-toggle {
+            max-width: 36px;
+            max-height: 36px;
+            background-color: $white;
+            border: 1px solid $theme-color;
+            &:hover {
+                background-color: $theme-color;
+                svg {
+                    color: $white;
+                }
+            }
+            svg {
+                max-width: 20px !important;
+                color: $theme-color;
+            }
+        }
+    }
+}

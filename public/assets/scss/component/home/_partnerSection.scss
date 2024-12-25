@@ -1,0 +1,80 @@
+@use "../../abstract" as *;
+
+.partner-section {
+    padding: 164px 0;
+    .partner-wrapper {
+        display: block;
+        margin: 0 auto;
+        max-width: 895px;
+    }
+    .title {
+        font-size: 32px;
+        font-weight: 700;
+        color: $gray-7;
+        margin-bottom: 72px;
+        text-align: center;
+    }
+    .partner {
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+        &-item {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 55.5%;
+            img {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    @include max-lg {
+        padding: 80px 0;
+        .title {
+            font-size: 28px;
+        }
+        .partner {
+            &-list {
+                gap: 24px 30px;
+            }
+        }
+    }
+
+    @include max-md {
+        padding: 56px 0 128px;
+        .partner-wrapper {
+            max-width: 464px;
+        }
+        .title {
+            font-size: 24px;
+        }
+        .partner {
+            &-list {
+                gap: 24px 20px;
+            }
+        }
+    }
+
+    @include max-sm {
+        .partner {
+            &-list {
+                gap: 24px 10px;
+            }
+        }
+    }
+
+    @include max-xs {
+        .partner {
+            &-list {
+                gap: 24px 5px;
+            }
+        }
+    }
+}
