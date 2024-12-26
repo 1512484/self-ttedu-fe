@@ -20,3 +20,5 @@ export default function userHandler(req: NextApiRequest, res: NextApiResponse) {
       res.status(405).end(`Method ${method} Not Allowed`)
   }
 }
+
+export const config = { runtime: 'edge' };
